@@ -25,6 +25,9 @@ Stores the number of columns defined by the user.
 - rowCount (int):
 Tracks how many rows have been inserted into the table.
 
+- add (int):
+  To check if the user wants to insert another row or no (0 = No, 1 = Yes).
+
 **Function Explanations**
 
 - createSheetName(string &sheetName):
