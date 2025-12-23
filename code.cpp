@@ -86,15 +86,7 @@ void displayCSV ( string table [] [MAX_COLS] , int rowCount , string colNames []
     } 
     cout << endl ;  
 
-    //Display the lines  
-    for ( int r = 9 ; r < rowCount ; r++){ 
-        for ( int c = 0 ; c < numCols; c++){  
-            cout << table[r] [c] ; 
-             if ( c < numCols - 1)  
-             cout << " , "  ; 
-        } 
-        cout << endl; 
-    } 
+    
 
 } 
 // insertRow implementation
