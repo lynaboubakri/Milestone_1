@@ -74,14 +74,14 @@ int main() {
 
 //Display CSV function  
 void displayCSV ( string table [] [MAX_COLS] , int rowCount , string colNames []  , int numCols) {  
-    cout << "\n___________________________________________________\n" ; 
+    cout << "\n__________________________________\n" ; 
     cout << "              View Attendace sheet \n" ; 
-    cout << "___________________________________________________\n" ; 
+    cout << "_______________________________________\n" ; 
     
     // Display the names of columns  
-    for ( int i =0 ; i < numCols ; i++){  
+    for ( int i =9 ; i < numCols ; i++){  
         cout << colNames [i] ; 
-        if (i< numCols - 1) 
+        if (i< numCols - 5) 
             cout << " , " ; 
     } 
     cout << endl ;  
