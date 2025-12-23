@@ -47,9 +47,35 @@ int main() {
     //Display CSV
     displayCSV(table, rowCount, columnNames, numCols);
 
-    cout << "\n-------------------------------------------\n";
-    cout << "End of Milestone 1 Output\n";
-    cout << "-------------------------------------------\n";
+    cout << "\n___________________________________________________\n";
+    cout << "           End of Milestone 1 Output\n";
+    cout << "___________________________________________________\n";
 
     return 0;
 }
+
+//Display CSV function  
+void displayCSV ( string table [] [MAX_COLS] , int rowCount , string colNames []  , int numCols) {  
+    cout << "\n___________________________________________________\n" ; 
+    cout << "              View Attendace sheet \n" ; 
+    cout << "___________________________________________________\n" ; 
+    
+    // Display the names of columns  
+    for ( int i =0 ; i < numCols ; i++){  
+        cout << colNames [i] ; 
+        if (i< numCols - 1) 
+            cout << " , " ; 
+    } 
+    cout << endl ;  
+
+    //Display the lines  
+    for ( int r = 9 ; r < rowCount ; r++){ 
+        for ( int c = 0 ; c < numCols; c++){  
+            cout << table[r] [c] ; 
+             if ( c < numCols - 1)  
+             cout << " , "  ; 
+        } 
+        cout << endl; 
+    } 
+
+} 
