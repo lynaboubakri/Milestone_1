@@ -72,23 +72,7 @@ int main() {
     return 0;
 }
 
-//Display CSV function  
-void displayCSV ( string table [] [MAX_COLS] , int rowCount , string colNames []  , int numCols) {  
-    cout << "\n__________________________________\n" ; 
-    cout << "              View Attendace sheet \n" ; 
-    cout << "_______________________________________\n" ; 
-    
-    // Display the names of columns  
-    for ( int i =9 ; i < numCols ; i++){  
-        cout << colNames [i] ; 
-        if (i< numCols - 5) 
-            cout << " , " ; 
-    } 
-    cout << endl ;  
 
-    
-
-} 
 // insertRow implementation
 void insertRow (string table[][MAX_COLS], int &rowCount, string colTypes[], int cumCols)
 cout << "\n___________________________________________________\n";
