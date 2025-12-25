@@ -66,20 +66,19 @@ int main() {
 
 void displayCSV ( string table [] [MAX_COLS] , int rowCount , string colNames []  , int numCols)
 { 
-    cout << "\n---------------------------------\n" ;
-    cout << " View Attendace sheet \n" ;
-    cout << "-----------------------------------\n" ;
+    cout << "___________________________________________________\n" ;
+    cout << "             View Attendace sheet \n" ;
+    cout << "___________________________________________________\n" ;
 
     // Display the names of columns 
     for ( int i =0 ; i < numCols ; i++)
     { 
-
         cout << colNames [i] ;
         if (i< numCols - 1)
          cout << " , " ;
     }
     cout << endl ; 
-
+    
     // Displat of the lines 
     for ( int r = 0 ; r < rowCount ; r++)
     {
