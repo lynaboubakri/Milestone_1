@@ -16,7 +16,7 @@ if (str.empty()) {
 return false;
 }
 int startIndex = 0;
-if (str.[0] == '-') { // if first character is a minus sign
+if (str[0] == '-') { // if first character is a minus sign
 if (str.length() == 1) { // if its only a minus sign (no digits)
 return false; // thats not valid
 }
@@ -27,7 +27,7 @@ if (!isdigit(str[i])) { // if this character is not a digit (0-9)
 return false; // Invalid - return false
 }
 }
-return ture; // all characters are digits - its valid
+return true; // all characters are digits - its valid
 }
 int main() {
     string sheetName;
@@ -128,7 +128,7 @@ cin.ignore ();
 getline(cin, input); // reads the entire line including spaces
 while (input.empty()) {
 cout << "Error: Value cannot be empty.\n";
-cout << Enter column " << (col + 1) << " value: ";
+cout << "Enter column " << (col + 1) << " value: ";
 getline(cin. input); // Ask again
 }
 table[rowCount][col] = input; // stores the text in the table
