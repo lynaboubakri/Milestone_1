@@ -220,10 +220,11 @@ void displayAttendance() {
     cout << "\n___________________________________________________\n" ;
     cout << "           Current Attendance Sheet\n" ;
     cout << "___________________________________________________\n" ;
-
+    cout << "StudentID, Name, Status\n";
+  
     for (int i = 0; i < rowCount; i++) {
-        cout << sheet[i].studentID << ","
-            << sheet[i].name << ","
+        cout << sheet[i].studentID << ", "
+            << sheet[i].name << ", "
             << sheet[i].status << endl;
 
     }
@@ -243,7 +244,7 @@ void displayAttendance() {
 }
 bool deleteAttendanceRow(int id) {
     int foundIndex = -1;
-    for (int i = 0; < rowCount; i++) {
+    for (int i = 0; i < rowCount; i++) {
 if (sheet[i].studentID == id) {
 foundIndex = i;
 break;
@@ -252,9 +253,10 @@ break;
 if (foundIndex == -1) {
 return false;
 }
-for (int i = foundIndex; < rowCount - 1; i++) {
+for (int i = foundIndex; i < rowCount - 1; i++) {
     sheet[i] = sheet[i + 1];
 }
+    
 rowCount--;
 cout << "\nUpdated Sheet:\n";
 displayAttendance();
