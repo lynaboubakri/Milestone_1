@@ -270,7 +270,7 @@ void createTerm(string &termName){
     cout<<"Reading attendance data from file...\n";
 }
 }
-int countRow() {
+int countRows() {
     return rowCount;
 }
 bool saveToFile(string filename) {
