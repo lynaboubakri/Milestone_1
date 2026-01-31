@@ -216,10 +216,49 @@ bool studentExists(int id) {
     //loop through the sheet array to check the existence of the ID
     for (int i=0; i<rowCount; i++) {
         //if the ID is found it returns true
-        if (sheet[i].studentID==id)
+void displayAttendance() {
+    cout << "\n___________________________________________________\n" ;
+    cout << "           Current Attendance Sheet\n" ;
+    cout << "___________________________________________________\n" ;
+
+    for (int i = 0; i < rowCount; i++) {
+        cout << sheet[i].studentID << ","
+            << sheet[i].name << ","
+            << sheet[i].status << endl;
+
+    }
+    cout << endl;
+}
+ bool updateAttendanceRow(int id, int newStatus) {
+     for (int i = 0; i < rowCount; i++) {
+        if (sheet[i].studentID==id) {
+            sheet[i].status = newStatus;
+
+            cout << "\nUpdated Sheet:\n";
+            displayAttendance();
+                
             return true;
     }
     return false;
+}
+bool deleteAttendanceRow(int id) {
+    int foundIndex = -1;
+    for (int i = 0; < rowCount; i++) {
+if (sheet[i].studentID == id) {
+foundIndex = i;
+break;
+}
+    }
+if (foundIndex == -1) {
+return false;
+}
+for (int i = foundIndex; < rowCount - 1; i++) {
+    sheet[i] = sheet[i + 1];
+}
+rowCount--;
+cout << "\nUpdated Sheet:\n";
+displayAttendance();
+return true;
 }
 void createTerm(string &termName){
     cout<<"Enter term name: ";
@@ -227,7 +266,10 @@ void createTerm(string &termName){
     termName=validFilename();
     cout<<"Database \"" << termName << "\" created and loaded.\n";
     cout<<"Reading attendance data from file...\n";
-    
+}
+}
+int countRow() {
+    return rowCount;
 }
 bool saveToFile(string filename) {
     //create output file stream
